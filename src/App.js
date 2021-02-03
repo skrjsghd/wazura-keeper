@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Waiting from './components/Waiting';
-
+import Login from './components/Login';
 
 function App() {
   const [start, setStart] = useState(false);
@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div>
-      {start ? <Waiting/> : <button onClick={onClickHandler}>let's get it</button>}
+      {start ? <Waiting/> : <Login isStart={onClickHandler}/>}
     </div>
   )
   
